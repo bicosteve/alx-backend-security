@@ -7,6 +7,10 @@ name = "pypi"
 django = "*"
 django-ip-geolocation = "*"
 django-ratelimit = "*"
+django-celery-beat = "*"
+django-celery-results = "*"
+python-decouple = "*"
+redis = "*"
 
 [dev-packages]
 
