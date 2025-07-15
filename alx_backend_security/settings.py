@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_ip_geolocation",
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "ip_tracking.middleware.IPLoggingMiddleware",
+    "django_ip_geolocation.middleware.IpGeolocationMiddleware",
 ]
 
 ROOT_URLCONF = "alx_backend_security.urls"
