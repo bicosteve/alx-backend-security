@@ -14,3 +14,19 @@ Repo:
     GitHub repository: alx-backend-security
     File: ip_tracking/middleware.py, ip_tracking/models.py
 ```
+
+```bash
+1. Task 1: IP Blacklisting
+
+Objective:
+    Implement IP blocking based on a blacklist.
+
+Instructions
+    Create ip_tracking/models.py with a BlockedIP model (field: ip_address).
+    Modify ip_tracking/middleware.py to block requests from IPs in BlockedIP. Return 403 Forbidden.
+    Create ip_tracking/management/commands/block_ip.pyto add IPs toBlockedIP.
+
+Repo:
+    GitHub repository: alx-backend-security
+    File: ip_tracking/middleware.py, ip_tracking/management/commands/block_ip.py
+```

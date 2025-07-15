@@ -1,6 +1,7 @@
 from django.utils.timezone import now
+from django.http import HttpResponseForbidden
 
-from .models import RequestLog
+from .models import RequestLog, BlockedIP
 
 
 class IPLoggingMiddleware:
@@ -9,6 +10,10 @@ class IPLoggingMiddleware:
 
     def __call__(self, request):
         ip = request.META.get("REMOTE_ADDR")
+
+        if BlockedIP.objects.filter(ip_address=ip).exists():
+            return HttpResponseForbidden("Access denied!")
+
         path = request.path
         timestamp = now()
 
